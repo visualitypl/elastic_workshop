@@ -18,7 +18,19 @@ Run elasticsearch and check if it's running on http://localhost:9200
 `elasticsearch` on Mac
 `sudo service elasticsearch start` on Ubuntu
 
+### Run using docker
+
+If you have your docker and docker-compose installed.
+
+`docker-compose up`
+
+Default user is `elastic` and password `changeme`
+
+# Install sense
+
 Download sense from chrome store. It's plugin that will maker our life easier during the workshop.
+
+https://chrome.google.com/webstore/detail/sense-beta/lhjgkmllcaadmopgmanpapmpjgmfcfig
 
 #Creating data
 Create index for movies
@@ -28,6 +40,7 @@ PUT movies with mapping.json
 
 curl -s --header "Content-Type:application/json"  -XPOST localhost:9200/_bulk --data-binary @movies.json
 
+Use option -u for typing user and password when running with docker.
 
 #Match all
 
