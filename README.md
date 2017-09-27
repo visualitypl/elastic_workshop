@@ -2,8 +2,25 @@
 
 
 #Setup elastic with index and seed data
+
+Installing elasticsearch:
+
+For mac users the easiest way would be to install it from homebrew:
+`brew install elasticsearch`
+
+For linux users:
+
+Please try this tutorial here:
+https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-elasticsearch-on-ubuntu-14-04
+
+Run elasticsearch and check if it's running on http://localhost:9200
+
+`elasticsearch` on Mac
+`sudo service elasticsearch start` on Ubuntu
+
 Download sense from chrome store. It's plugin that will maker our life easier during the workshop.
 
+#Creating data
 Create index for movies
 
 PUT movies
@@ -402,4 +419,4 @@ also could be passed to body
 
 Exercise.
 
-Create pagination for movies with genre action. 
+Create pagination for movies with genre action.
