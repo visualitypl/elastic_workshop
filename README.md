@@ -44,7 +44,7 @@ curl -s --header "Content-Type:application/json"  -XPOST localhost:9200/_bulk --
 
 Use option `-u` for typing user and password when running with docker.
 
-[Bulk import][https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-bulk.html]
+[Bulk import](https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-bulk.html)
 
 ## Match all
 
@@ -67,7 +67,7 @@ You should get this type of result in response:
     "max_score": 1,
 ```
 
-[Match all docs][https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-match-all-query.html]
+[Match all docs](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-match-all-query.html)
 #### Exercise
 
 Type this query into sense and see what results you get for movies index.
@@ -87,7 +87,8 @@ GET /_search
     }
 }
 ```
-[String query documentation][https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html]
+[String query documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html)
+
 ##### Exercise.
 
 Using this knowledge find movie Scarface in the elasticsearch. It should be returned as first result.
@@ -155,13 +156,11 @@ one edit allowed
 `>5`
 two edits allowed
 
-You could also use number values, like `0, 1, 2`. Fuzziness is interpreted as  Levenshtein Edit Distance. More about: [fuzziness][https://www.elastic.co/guide/en/elasticsearch/guide/current/fuzziness.html]
+You could also use number values, like `0, 1, 2`. Fuzziness is interpreted as  Levenshtein Edit Distance. More about: [fuzziness](https://www.elastic.co/guide/en/elasticsearch/guide/current/fuzziness.html)
 
 Exercise.
 
 Write query that will return all Captain America movies based on query, which was mistyped: "Captaon America".
-
-
 
 ## Filtering
 
@@ -192,7 +191,7 @@ lte = Less-than or equal to
 
 lt = Less-than
 
-[Range query][https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-range-query.html]
+[Range query](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-range-query.html)
 
 #### Exercise.
 
@@ -237,7 +236,7 @@ POST _search
   }
 }
 ```
-[Bool query][https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-bool-query.html]
+[Bool query](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-bool-query.html)
 
 #### Exercise.
 
@@ -275,7 +274,7 @@ and returns:
 }
 ```
 
-[Read more about aggregations here][https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations.html]
+[Read more about aggregations here](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations.html)
 
 #### Exercise.
 
@@ -420,7 +419,7 @@ GET /my_index/my_type/_search
 }
 ```
 
-[Sorting][https://www.elastic.co/guide/en/elasticsearch/reference/current/search-request-sort.html]
+[Sorting](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-request-sort.html)
 
 #### Exercise.
 
@@ -485,3 +484,18 @@ also could be passed to body
 #### Exercise.
 
 Create pagination for movies with genre action.
+
+### Final task
+
+Put your knowledge to good use and create movie recommendation query that will take text which could include: plot, actors, title, release date.
+
+It should:
+1. Give movies with higher rating, higher score but be still relevant.
+2. Prefer newer movies.
+3. Prefer shorter movies over longer movies.
+
+You can also play around with it further and extra powers to it.
+
+Save your query on google drive and send me.
+
+[highlight query][https://www.elastic.co/guide/en/elasticsearch/reference/current/search-request-highlighting.html]
