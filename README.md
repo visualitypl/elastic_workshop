@@ -44,6 +44,8 @@ curl -s --header "Content-Type:application/json"  -XPOST localhost:9200/_bulk --
 
 Use option `-u` for typing user and password when running with docker.
 
+[Bulk import][https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-bulk.html]
+
 ## Match all
 
 Let's make the simplest possible query to our movies index. Query that returns all results, it's called match all query.
@@ -64,6 +66,8 @@ You should get this type of result in response:
     "total": 306,
     "max_score": 1,
 ```
+
+[Match all docs][https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-match-all-query.html]
 #### Exercise
 
 Type this query into sense and see what results you get for movies index.
@@ -83,7 +87,7 @@ GET /_search
     }
 }
 ```
-
+[String query documentation][https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html]
 ##### Exercise.
 
 Using this knowledge find movie Scarface in the elasticsearch. It should be returned as first result.
@@ -151,7 +155,7 @@ one edit allowed
 `>5`
 two edits allowed
 
-You could also use number values, like `0, 1, 2`. Fuzziness is interpreted as  Levenshtein Edit Distance. More about: https://www.elastic.co/guide/en/elasticsearch/guide/current/fuzziness.html
+You could also use number values, like `0, 1, 2`. Fuzziness is interpreted as  Levenshtein Edit Distance. More about: [fuzziness][https://www.elastic.co/guide/en/elasticsearch/guide/current/fuzziness.html]
 
 Exercise.
 
@@ -187,6 +191,8 @@ gt = Greater-than
 lte = Less-than or equal to
 
 lt = Less-than
+
+[Range query][https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-range-query.html]
 
 #### Exercise.
 
@@ -231,6 +237,7 @@ POST _search
   }
 }
 ```
+[Bool query][https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-bool-query.html]
 
 #### Exercise.
 
@@ -267,6 +274,8 @@ and returns:
     }
 }
 ```
+
+[Read more about aggregations here][https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations.html]
 
 #### Exercise.
 
@@ -410,6 +419,8 @@ GET /my_index/my_type/_search
     }
 }
 ```
+
+[Sorting][https://www.elastic.co/guide/en/elasticsearch/reference/current/search-request-sort.html]
 
 #### Exercise.
 
