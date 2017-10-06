@@ -245,7 +245,7 @@ Create query that will find superhero movies (keywords field:  superhero) that a
 You should get 12 results for this query
 
 
-#Aggregations
+## Aggregations
 
 Let's get some interesting stats for analytics, we want to get overall view how some value occurs through the documents. The stats aggregation would give us general insight, gives us count, minimum value, maximum value, averages.
 
