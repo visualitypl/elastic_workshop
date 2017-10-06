@@ -445,6 +445,8 @@ GET /_search
     }
 }
 ```
+[highlight query](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-request-highlighting.html)
+
 
 #### Exercise.
 
@@ -498,4 +500,3 @@ You can also play around with it further and extra powers to it.
 
 Save your query on google drive and send me.
 
-[highlight query][https://www.elastic.co/guide/en/elasticsearch/reference/current/search-request-highlighting.html]
