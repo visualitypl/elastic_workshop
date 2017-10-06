@@ -102,7 +102,8 @@ GET /_search
     "query": {
         "query_string" : {
             "default_field" : "content",
-            "query" : "Strawberry pie with jello"
+            "query" : "Strawberry pie with jello",
+            "default_operator": "AND"
         }
     }
 }
